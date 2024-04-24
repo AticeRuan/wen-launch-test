@@ -31,3 +31,26 @@ body {
     text-wrap: balance;
   }
 }
+
+.text-glow:hover {
+  box-shadow: 0 0 10px 1px white; /* Change color and size as needed */
+}
+
+.pixel {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.25),
+    rgba(74, 245, 211, 0.25) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+
+  mask-image: linear-gradient(
+    90deg,
+    #4af5d3 30%,
+    rgba(74, 245, 211, 0.25) 90%,
+    transparent
+  );
+
+  width: fit-content;
+}

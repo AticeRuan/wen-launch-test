@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-
+import TransitionProvider from './_components/transitionProvider'
 import './globals.css'
 import Navbar from './_components/navbar'
 import Cloud from './_components/cloud'
@@ -14,10 +14,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} text-white`}>
-        <Navbar />
-
-        {children}
+      <body className={`${inter.className} text-white bg-black`}>
+        <TransitionProvider> {children}</TransitionProvider>
       </body>
     </html>
   )
