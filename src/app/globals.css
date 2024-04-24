@@ -33,7 +33,7 @@ body {
 }
 
 .text-glow:hover {
-  box-shadow: 0 0 10px 1px white; /* Change color and size as needed */
+  text-shadow: 0 0 10px 1px white; /* Change color and size as needed */
 }
 
 .pixel {
@@ -53,4 +53,12 @@ body {
   );
 
   width: fit-content;
+}
+
+.pixeboy {
+  font-family: 'pixeboy';
+}
+
+.gohu {
+  font-family: 'gohuFont';
 }

@@ -3,6 +3,9 @@ import { motion } from 'framer-motion'
 import Logo from './logo'
 import { useState } from 'react'
 import Link from 'next/link'
+import localFont from 'next/font/local'
+
+const gohu = localFont({ src: '../_assets/GohuFont14NerdFont-Regular.ttf' })
 
 const links = [
   {
@@ -81,8 +84,12 @@ const Navbar = () => {
       {/* desktop screen */}
       <div className="md:flex gap-[5rem] hidden  ">
         {links.map((link, index) => (
-          <Link key={index} href={link.url} className="text-white uppercase">
-            {link.name}
+          <Link
+            key={index}
+            href={link.url}
+            className="text-white uppercase lg:text-xl"
+          >
+            <div className={`${gohu.className}`}>{link.name}</div>
           </Link>
         ))}
       </div>
@@ -116,7 +123,9 @@ const Navbar = () => {
         >
           {links.map((link) => (
             <motion.div key={link.url} variants={listItemVariants}>
-              <div className="z-40 uppercase text-[#4af5de]">{link.name}</div>
+              <div className="z-40 uppercase text-[#4af5de]">
+                <div className={`${gohu.className}`}>{link.name}</div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
